@@ -1,0 +1,73 @@
+<!-- Get fields Id.no, cname,add1,add2,city,pin, emailid, dob(date),sex, Roomtype(dropdown list),no of
+stay(list) Typeofpackage (Radiobutton)
+ Display the result of charges for the room by calculating the criteria
+ (Criteria for charge of summer package is SUPER DELUXE = Rs1500/day, and DELUXE
+=1000/day, DOUBLE=750/day, SINGLE=500/day)
+ (Criteria for charge of non-summer package is SUPER DELUXE = Rs1250/day, and DELUXE
+=750/day, DOUBLE=600/day, SINGLE=300/day) in the next page in an enhanced and
+highlighted text -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="box">
+        <h1>Online Hotel Management</h1>
+        <form action="Booking.php" method="post" target="_blank">
+            Id No: <input type="number" name="id"><br>
+            Name: <input type="text" name="cname"><br>
+
+            <fieldset >
+                <legend>Address</legend>
+             <label>Address 1: </label>
+             <textarea name="add1" rows="3" cols="50"></textarea><br>
+             <label>Address 2: </label>
+             <textarea name="add1" rows="3" cols="50"></textarea><br>
+             <label>City: </label>
+             <input type="text" name="city"><br>
+             <label>Pincode: </label>
+             <input type="text" name="pincode"><br>
+             </fieldset><br>
+
+             <label>Email id: </label>
+         <input type="email" name="email_id"><br>
+
+         <label for="dob">Date of Birth: </label>
+            <input type="date" name="dob" value="dob"><br><br>
+         
+         Gender:<br> <input type="radio" name="gender" value="female">female<br>
+         <input type="radio" name="gender" value="male">male<br><br>
+
+         <!-- Roomtype(dropdown list),no of
+stay(list) Typeofpackage (Radiobutton) -->
+
+        RoomType: <select name="roomType">
+            <option value="superDeluxe">Super Deluxe</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="double">Double</option>
+            <option value="single">Single</option>
+        </select><br><br>
+
+        No.of.Stay:<br> <select name="stay">
+            <option value="NoOfStay1">1 member</option>
+            <option value="NoOfStay2">2 member</option>
+            <option value="NoOfStay4">4 member</option>
+            <option value="NoOfStay6">6 member</option>
+        </select><br><br>
+
+        Type of Package:<br> <input type="radio" value="summer" name="packageType">Summer<br>
+        <input type="radio" name="packageType" value="nonSummer">NonSummer<br> <br>
+        <input type="submit" value="book Now">
+
+        </form>
+        <a href="menu.html">Back to Menu</a>
+    </section>
+
+</body>
+</html>

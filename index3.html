@@ -1,0 +1,63 @@
+<!-- Design and develop a web based application using PHP and
+HTML controls for Online Registration for technical programs
+
+with fees Report with all possible web controls and validation controls
+a. Participant Name (text), College name(text), Branch (drpdownlist), Programme (4 programmes
+in checkbox), No of days(list), Gender, DoB, Typeofmember( i.e Internal or external member)
+(Radio button) and show the following details.
+ Display the result of total charge for the programmes by calculating the criteria
+(Criteria for charge of Internal member is C# = Rs1000/day, and C++ =1750/day,
+C=1500/day, Java=1250/day) in the next page in an enhanced and heighted text
+ Display the result of total charge for the programme by calculating the criteria
+(Criteria for charge of External member is C# = Rs1500/day, and C++ =2000/day,
+C=1750/day, Java=1500/day) in the next page in an enhanced and highlighted text -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Registration</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <section class="box">
+        
+        <h1>Online Registration</h1>
+        <form action="registration.php" method="post" target="_blank">
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="name"><br>
+            <label for="col_name">College Name: </label>
+            <input type="text" name="col_name" value="col_name"><br>
+            <label for="branch">Branch: </label>
+            <input type="text" name="branch" value="branch"><br><br>
+            <label for="dob">Date of Birth: </label>
+            <input type="date" name="dob" value="dob"><br><br>
+            
+            <!-- Programme (4 programmes
+            in checkbox), No of days(list), Gender, DoB, Typeofmember( i.e Internal or external member)
+            (Radio button) -->
+
+            Programme:<br> <input type="checkbox" name="programme[]" value="Cprog">C Programming<br>
+                        <input type="checkbox" name="programme[]" value="Corejava">Core Java<br>
+                        <input type="checkbox" name="programme[]" value="Python">Python<br>
+                        <input type="checkbox" name="programme[]" value="Web">Web Development<br><br>
+
+            No.of.Days:<br> <select name="days">
+                <option value="days7">7 days</option>
+                <option value="days15">15 days</option>
+                <option value="month1">1 month</option>
+            </select><br><br>
+            
+            Gender:<br> <input type="radio" name="gender" value="female">female<br>
+            <input type="radio" name="gender" value="male">male<br><br>
+
+            Member Type:<br> <input type="radio" name="memberType" value="internal">internal<br>
+            <input type="radio" name="memberType" value="external">external<br><br>
+    
+            <input type="submit" name="register" value="register"><br>
+
+        </form>
+        <a href="menu.html">Back to Menu</a>
+    </section>
+</body>
+</html>

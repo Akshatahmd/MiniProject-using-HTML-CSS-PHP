@@ -1,0 +1,90 @@
+<!-- Get Id_no, name, add1,add2, city, pin, email_id, sex( radio button), qualification(list
+box), Class( list box) experience in job (combo box), age(text box)
+Display the results of selection by calculating the criteria (Criteria for selection is UG =
+Distinction and Experience >=3 yrs for the age<=30; PG= First Class and Experience
+>=1 for the age<=35) in the next page in an enhanced and highlighted text -->
+<?php
+ function redirect_to($result_page){
+    header("Location: ",$result_page);
+ }
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employement Drive</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <section class="box">
+       
+    <h1>Employement Drive Details</h1><br>
+
+    <form action="results.php" method="POST" target="_blank">
+    <fieldset >
+        <legend>General Details</legend>
+         <label>Id_no: </label>
+         <input type="number" name="Id_no"><br>
+
+         <label>Name: </label>
+         <input type="text" name="Name"><br>
+
+         <label>Email id: </label>
+         <input type="email" name="email_id"><br>
+
+         <label>age: </label>
+         <input type="number" name="age"><br><br>
+    </fieldset>
+    <br>
+
+         <fieldset >
+            <legend>Address</legend>
+         <label>Address 1: </label>
+         <textarea name="add1" rows="3" cols="50"></textarea><br>
+         <label>Address 2: </label>
+         <textarea name="add1" rows="3" cols="50"></textarea><br>
+         <label>City: </label>
+         <input type="text" name="city"><br>
+         <label>Pincode: </label>
+         <input type="text" name="pincode"><br>
+         </fieldset><br>
+
+         <fieldset >
+            <legend>Gender: </legend>
+         <input type="radio" name="gender" id="female">female<br>
+         <input type="radio" name="gender" id="male">male<br>
+        
+         </fieldset><br>
+        
+            <label class="text-fieldset">Qualification: </label>
+            <select name="qualification" multiple>
+            <option value="Bachelor's degree">1. Bachelor's degree</option>
+            <option value="PostGraduate">2. PostGraduate</option>
+            </select><br><br>
+
+            <label class="text-fieldset">Class: </label>
+            <select name="class" multiple>
+            <option value="distinction">1. Distinction</option>
+            <option value="first class">2. First class</option>
+            <option value="Second class">3. Second class</option>
+            <option value="third class">4. third class</option>
+            <option value="fail">4. fail</option>
+            </select>
+            <br><br>
+
+            <label class="text-fieldset">Experience: </label>
+            <select name="experience">
+            <option value="fresher">1. fresher</option>
+            <option value="great_1">2. greater than or equal to 1 years</option>
+            <option value="great_3">3. greater than or equal to 3 years</option>
+            </select>
+        <br><br>
+        <input type="submit" value="check selection"><br>
+    </form>
+    <br><a href="menu.html">Back to Menu</a>
+    </section>
+</body>
+</html>

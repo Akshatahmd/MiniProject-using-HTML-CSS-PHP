@@ -1,0 +1,51 @@
+<!-- Design and develop a web based application using PHP and HTML controls for Online Mark
+Management Report with all possible web controls
+Get the fields sname, rollno, department, 5 subject marks using appropriate HTML
+controls.
+Display the entire results by calculating average, pass/fail result ( 50 and above in all
+subjects is a pass), class (80 and above distinction , >= 60 and < 80 = first class, >=50
+and <60 = second class, rest of them are No class) in the next page in an enhanced and
+highlighted text -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks report</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <section class="box">
+        <h1>Marks Report</h1><br>
+    <form action="results2.php" method="post" target="_blank">
+        <fieldset>
+            <legend>Student Details</legend>
+            <label>Student Name: </label>
+            <input type="text" name="sname"><br>
+            <label>USN: </label>
+            <input type="text" name="usn"><br>
+            <label>Department: </label>
+            <input type="text" name="dept"><br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Marks of 5 subjects</legend>
+            <label>Subject 1: </label>
+            <input type="number" name="sub1_marks"><br>
+            <label>Subject 2: </label>
+            <input type="number" name="sub2_marks"><br>
+            <label>Subject 3: </label>
+            <input type="number" name="sub3_marks"><br>
+            <label>Subject 4: </label>
+            <input type="number" name="sub4_marks"><br>
+            <label>Subject 5: </label>
+            <input type="number" name="sub5_marks"><br>
+        </fieldset><br>
+        <input type="submit" name="check results">
+        <br>
+    </form>
+    <a href="menu.html">Back to Menu</a>
+    </section>
+</body>
+</html>
